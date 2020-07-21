@@ -14,7 +14,6 @@ import "@babylonjs/loaders/glTF";
 import "@babylonjs/core/Materials/standardMaterial";
 import "@babylonjs/core/Materials/Textures/Loaders/envTextureLoader";
 
-
 // digital assets
 import controllerModel from "../../assets/glb/samsung-controller.glb";
 import roomEnvironment from "../../assets/environment/room.env"

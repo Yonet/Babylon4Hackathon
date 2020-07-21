@@ -10,6 +10,13 @@ const getModuleToLoad = (): string | undefined => {
     }
 }
 
+// const xrPolyfillPromise = new Promise((resolve) => {
+//     if (navigator.xr) {
+//         return resolve();
+//     }
+//     define('polyfill', ['https://cdn.jsdelivr.net/npm/webxr-polyfill@latest/build/webxr-polyfill.js'], (polyfill) => { new polyfill(); resolve(); });
+// });
+
 export const babylonInit = async (): Promise<void>  => {
     // get the module to load
     const moduleName = getModuleToLoad();
@@ -26,9 +33,13 @@ export const babylonInit = async (): Promise<void>  => {
     const scene = await createSceneModule.createScene(engine, canvas);
 
     // Register a render loop to repeatedly render the scene
-    engine.runRenderLoop(function () {
-        scene.render();
-    });
+    // scene.then(()=>{
+        engine.runRenderLoop(function () {
+            if (scene) {
+                scene.render();
+            }
+        });
+    // })
 
     // Watch for browser/canvas resize events
     window.addEventListener("resize", function () {

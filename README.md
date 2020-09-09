@@ -2,55 +2,6 @@
 
 A Babylon.js sample project using typescript, latest babylon.js es6 core module, webpack 4 with webpack dev server, hot loading, eslint, vscode support and more.
 
-## Setup
-
-You can clone and delete this repository's history and start a new git project by running the below script. You need to create your own github repo first. Replace <your-project-name> with your own github project url.
-
-```git
-git clone --depth=1 https://github.com/Yonet/Babylon4Hackathon.git <your-project-name>
-```
-
-OR 
-```git
-
-// Clone the seed project
-git clone --depth=1 https://github.com/Yonet/Babylon4Hackathon.git
-
--- Remove the history from the repo
-rm -rf .git
-
--- recreate the repos from the current content only
-git init
-git add .
-git commit -m "Initial commit"
-
--- push to the github remote repos ensuring you overwrite history
-git remote add origin git@github.com:<YOUR ACCOUNT>/<YOUR REPOS>.git
-git push -u --force origin main
-
-```
-
-## How to update your project to latest seed?
-
-<!-- Whenever there is a new update for  [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html?WT.mc_id=hololensseedproject-github-ayyonet) or [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/?WT.mc_id=hololensseedproject-github-ayyonet) packages, this repo will be updated with the latest version. You can automaticly get the latest packages by adding the seed repo as your upstream and pulling from it.  -->
-
-```
-git remote add upstream https://github.com/RaananW/babylonjs-webpack-es6.git
-git pull upstream master
-```
-
-You can check to see if your remote origin and upstream by running:
-
-```
-git remote -v
-```
-
-You can remove the upstream anytime by running:
-
-```
-git remote remove upstream https://github.com/RaananW/babylonjs-webpack-es6.git
-``` 
-
 ## Getting started
 
 To run the basic scene:
